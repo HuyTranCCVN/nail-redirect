@@ -2,7 +2,16 @@ import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    window.location.href = 'https://nailsforus.com';
+    if(window.location.host.includes('facebook.com')) {
+      window.location.href = 'https://nailsforus.com';
+    }
+
+    // if (window.location.hostname !== 'localhost') {
+      
+    // }
+
+
+    // window.location.href = 'https://nailsforus.com';
   }, []);
 
   return null;
